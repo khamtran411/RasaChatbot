@@ -4,16 +4,15 @@ session_config:
 intents:
 - greet
 - goodbye
-- bot_challenge
 - affirm
 - deny
 - mood_great
 - mood_unhappy
-entities:
-- text
+- Capability
+- services
+- services-DynamoDb
+- services-EC2
 responses:
-  utter_greet:
-  - text: Hey! How are you?
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -23,9 +22,27 @@ responses:
   - text: Great, carry on!
   utter_goodbye:
   - text: Bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-actions:
-- utter_goodbye
-- utter_greet
-- utter_iamabot
+  utter_greet:
+  - text: Hello, I am RASA chatbot designed for Amazon Web Service. How can I help
+      you?
+  utter_service:
+  - text: I can assist you aboust Amazon web Services include Cloud Server, DynamoDB....
+      Are you ready to explore AWS (Amazon Web Service)
+  utter_requirement:
+  - text: In order to user AWS services, you will need AWS account Do you have one?
+      if not you can make one here https://portal.aws.amazon.com/billing/signup#/start
+  utter_Dynamodb:
+  - text: Amazon DynamoDB is a key-value and document database that delivers single-digit
+      millisecond performance at any scale. It's a fully managed, multiregion, multimaster,
+      durable database with built-in security, backup and restore, and in-memory caching
+      for internet-scale applications. DynamoDB can handle more than 10 trillion requests
+      per day and can support peaks of more than 20 million requests per second. I
+      suggerst you read documentation at https://docs.aws.amazon.com/dynamodb/index.html
+      for more infomation
+  utter_EC2:
+  - text: Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides
+      secure, resizable compute capacity in the cloud. It is designed to make web-scale
+      cloud computing easier for developers. Amazon EC2's simple web service interface
+      allows you to obtain and configure capacity with minimal friction. I suggerst
+      you read documentation at https://docs.aws.amazon.com/ec2/index.html for more
+      infomation

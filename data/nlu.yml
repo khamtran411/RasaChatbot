@@ -15,8 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-    - aloha
-    - ola
+    - hello rasa
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +29,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-    - tam biet
 - intent: affirm
   examples: |
     - yes
@@ -64,25 +62,20 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-- intent: mood_unhappy
+- intent: Capability
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-- intent: bot_challenge
+    - what can you do ?
+    - What is your Capability ?
+    - uhm what can you do for me?
+    - what can you do for me?
+- intent: services-DynamoDb
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Tell me about DynamoDb
+    - How can I set up DynamoDb
+    - how to set up Dynamobd
+
+- intent: services-EC2
+  examples: |
+   - Tell me about EC2
+   - tell me about ec2
+
