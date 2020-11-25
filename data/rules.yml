@@ -8,16 +8,28 @@ stories:
   - action: utter_service
   - intent: affirm
   - action: utter_requirement
-- story: Story from Conversation ID f9e1b9a4fefd45159c6b36643429d15e
-  steps:
-  - intent: services-DynamoDb
-  - action: utter_Dynamodb
 - story: Story from Conversation ID a8088440a48a491f8576796cdc8371e0
   steps:
   - intent: services-EC2
   - action: utter_EC2
+  - action: utter_did_that_help
+- story: Story from Conversation ID dc07fbe2d38644868851dca4a86e214e
+  steps:
+  - intent: services-DynamoDb
+  - action: utter_Dynamodb
+  - action: utter_did_that_help
 rules:
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
+- rule: ask if it helps after every answer.
+  steps:
+  - intent: services-EC2
+  - action: utter_EC2
+  - action: utter_did_that_help
+- rule: Conversation start
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_greet
