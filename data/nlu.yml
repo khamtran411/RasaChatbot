@@ -33,6 +33,8 @@ nlu:
   examples: |
     - yes
     - y
+    - ok
+    - okay
     - indeed
     - of course
     - that sounds good
@@ -46,22 +48,6 @@ nlu:
     - don't like that
     - no way
     - not really
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
 - intent: Capability
   examples: |
     - what can you do ?
@@ -73,9 +59,10 @@ nlu:
     - Tell me about DynamoDb
     - How can I set up DynamoDb
     - how to set up Dynamobd
-
+    - what is dynamodb ?
 - intent: services-EC2
   examples: |
    - Tell me about EC2
    - tell me about ec2
+   - what is ec2 ? 
 

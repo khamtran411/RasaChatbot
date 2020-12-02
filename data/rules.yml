@@ -18,6 +18,29 @@ stories:
   - intent: services-DynamoDb
   - action: utter_Dynamodb
   - action: utter_did_that_help
+- story: did that help? choice no
+  steps:
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_try-again
+  - intent: affirm
+  - action: utter_May-I-help-you
+
+- story: did that help? choice yes
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_anything-else
+- story: do you need? yes
+  steps:
+  - action: utter_anything-else
+  - intent: affirm
+  - action: utter_May-I-help-you
+- story: do you need? no
+  steps:
+  - action: utter_anything-else
+  - intent: deny
+  - action: utter_my-pleasure
 rules:
 - rule: Say goodbye anytime the user says goodbye
   steps:

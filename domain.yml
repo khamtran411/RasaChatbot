@@ -10,11 +10,7 @@ intents:
 - services
 - services-DynamoDb
 - services-EC2
-- mood_great
 responses:
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
   utter_did_that_help:
   - text: Did that help you?
   utter_goodbye:
@@ -45,3 +41,9 @@ responses:
       infomation
   utter_anything-else:
   - text: Do you need anything else?
+  utter_try-again:
+  - text: Sorry to hear it. Could you let me try again?
+  utter_May-I-help-you:
+  - text: What do you need?
+  utter_my-pleasure:
+  - text: It is my pleasure to help you. I am still here any time.
